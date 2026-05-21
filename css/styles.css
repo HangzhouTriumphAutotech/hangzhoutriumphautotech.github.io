@@ -18,6 +18,7 @@
   --radius-sm: 8px;
   --header-h: 64px;
   --max-w: 1120px;
+  --hero-preview-aspect: 1449 / 861;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC',
     'Microsoft YaHei', sans-serif;
 }
@@ -185,8 +186,8 @@ a:hover {
   max-width: var(--max-w);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.14fr);
+  gap: 40px;
   align-items: center;
 }
 
@@ -211,7 +212,8 @@ a:hover {
 }
 
 .hero-visual-caption {
-  margin: 10px 0 0;
+  margin: 12px 0 0;
+  padding: 0 4px;
   font-size: 12px;
   text-align: center;
   color: var(--trade-text-secondary);
@@ -286,7 +288,7 @@ a:hover {
   color: var(--trade-text-muted);
 }
 
-.product-card > p:not(.product-tagline) {
+.product-card>p:not(.product-tagline) {
   flex: 1;
   margin: 0 0 16px;
   font-size: 14px;
@@ -300,7 +302,7 @@ a:hover {
   color: var(--trade-text-secondary);
 }
 
-.product-highlights li + li {
+.product-highlights li+li {
   margin-top: 4px;
 }
 
@@ -409,20 +411,32 @@ a:hover {
 
 .hero-visual {
   margin: 0;
+  min-width: 0;
+  padding: 0 6px;
   background: var(--trade-surface);
   border: 1px solid var(--trade-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-preview-frame {
   position: relative;
-  aspect-ratio: 1289 / 861;
-  max-height: min(520px, 72vh);
   width: 100%;
+  aspect-ratio: var(--hero-preview-aspect);
   background: var(--trade-fill-muted);
+  border: 1px solid var(--trade-border);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-preview-frame.is-loaded {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  overflow: visible;
 }
 
 .hero-preview-placeholder {
@@ -445,8 +459,8 @@ a:hover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top center;
+  object-fit: cover;
+  object-position: center;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -496,9 +510,11 @@ a:hover {
 .mock-dot:nth-child(1) {
   background: #ff5f57;
 }
+
 .mock-dot:nth-child(2) {
   background: #febc2e;
 }
+
 .mock-dot:nth-child(3) {
   background: #28c840;
 }
@@ -865,7 +881,7 @@ a:hover {
   color: var(--trade-text-secondary);
 }
 
-.download-notes li + li {
+.download-notes li+li {
   margin-top: 8px;
 }
 
@@ -1008,6 +1024,11 @@ a:hover {
 
   .hero-visual {
     order: -1;
+    padding: 0;
+  }
+
+  .hero-preview-frame.is-loaded {
+    max-width: 100%;
   }
 
   .features-grid {
