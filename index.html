@@ -1,47 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TradeInWork 外贸客户管理系统 — 本地桌面 CRM | 宁波西泠人工智能科技有限公司</title>
-    <meta
-      name="description"
-      content="TradeInWork（外贸客户管理系统）是专为外贸企业打造的本地桌面 CRM：客户跟进、销售/采购/物流订单、合同 PI/PO、报价单、报表利润分析、AI 智能助手与应用市场。数据存于本机 SQLite，安全可控。"
-    />
-    <meta
-      name="keywords"
-      content="外贸CRM,客户管理系统,订单管理,销售合同,采购合同,形式发票,PI,PO,外贸软件,本地CRM,Electron,TradeInWork,宁波西泠人工智能"
-    />
-    <meta name="author" content="宁波西泠人工智能科技有限公司" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://tradeinwork.com/" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tradeinwork.com/" />
-    <meta property="og:title" content="TradeInWork 外贸客户管理系统" />
-    <meta
-      property="og:description"
-      content="外贸企业一站式本地桌面 CRM：客户、订单、合同、物流、报表与 AI 助手，数据留在您的电脑。"
-    />
-    <meta property="og:image" content="https://tradeinwork.com/assets/logo.png" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta property="og:site_name" content="TradeInWork" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trade Work 外贸客户管理系统 — 本地桌面 CRM | 宁波西泠人工智能科技有限公司</title>
+  <meta name="description"
+    content="TradeInWork（外贸客户管理系统）是专为外贸企业打造的本地桌面 CRM：客户跟进、销售/采购/物流订单、合同 PI/PO、报价单、报表利润分析、AI 智能助手与应用市场。数据存于本机 SQLite，安全可控。" />
+  <meta name="keywords" content="外贸CRM,客户管理系统,订单管理,销售合同,采购合同,形式发票,PI,PO,外贸软件,本地CRM,TradeWork,宁波西泠人工智能" />
+  <meta name="author" content="宁波西泠人工智能科技有限公司" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tradeinwork.com/" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="TradeInWork 外贸客户管理系统" />
-    <meta
-      name="twitter:description"
-      content="专为外贸企业设计的本地桌面 CRM，涵盖客户、订单、合同、报表与 AI 智能助手。"
-    />
-    <meta name="twitter:image" content="https://tradeinwork.com/assets/logo.png" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tradeinwork.com/" />
+  <meta property="og:title" content="Trade Work 外贸客户管理系统" />
+  <meta property="og:description" content="外贸企业一站式本地桌面 CRM：客户、订单、合同、物流、报表与 AI 助手，数据留在您的电脑。" />
+  <meta property="og:image" content="https://tradeinwork.com/assets/logo.png" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="TradeInWork" />
 
-    <link rel="icon" href="assets/logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/logo.png" />
-    <link rel="stylesheet" href="css/styles.css" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Trade Work 外贸客户管理系统" />
+  <meta name="twitter:description" content="专为外贸企业设计的本地桌面 CRM，涵盖客户、订单、合同、报表与 AI 智能助手。" />
+  <meta name="twitter:image" content="https://tradeinwork.com/assets/logo.png" />
 
-    <script type="application/ld+json">
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
@@ -74,6 +64,8 @@
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Windows, macOS",
             "description": "基于 Electron 的纯本地外贸 CRM 桌面应用，含客户管理、全流程订单、合同单证、报表统计、AI 助手与应用市场。",
+            "softwareVersion": "0.1.3",
+            "downloadUrl": "https://github.com/HangzhouTriumphAutotech/hangzhoutriumphautotech.github.io/releases/download/v0.1.2/TradeWork.Setup.0.1.3.exe",
             "offers": {
               "@type": "Offer",
               "price": "0",
@@ -98,339 +90,380 @@
         ]
       }
     </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">跳到主要内容</a>
+</head>
 
-    <header class="site-header" role="banner">
-      <div class="header-inner">
-        <a class="brand" href="https://tradeinwork.com/" aria-label="TradeInWork 首页">
-          <img src="assets/logo.png" width="36" height="36" alt="TradeInWork 标志" />
-          <span>TradeInWork</span>
-        </a>
-        <nav aria-label="主导航">
-          <button
-            type="button"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="nav-main"
-            aria-label="打开菜单"
-          >
-            ☰
-          </button>
-          <ul id="nav-main" class="nav-main">
-            <li><a href="#features">功能</a></li>
-            <li><a href="#highlights">特色</a></li>
-            <li><a href="#workflow">业务闭环</a></li>
-            <li><a href="#contact" class="nav-cta">联系我们</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-inner">
-          <div class="hero-copy reveal">
-            <span class="hero-badge">本地桌面 · 数据自主 · 外贸专属</span>
-            <h1 id="hero-title">外贸客户管理系统<br />让每一笔订单都可追溯</h1>
-            <p class="hero-lead">
-              <strong>TradeInWork</strong> 是宁波西泠人工智能科技有限公司为外贸团队打造的纯本地
-              CRM 桌面应用。客户跟进、销售/采购/物流订单、合同 PI/PO、利润报表与 AI
-              助手集中在一处，数据保存在您本机的 SQLite，不上云、更安心。
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">预约演示 / 咨询</a>
-              <a class="btn btn-secondary" href="#features">了解功能模块</a>
-            </div>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="https://tradeinwork.com/" aria-label="TradeInWork 首页">
+        <img src="assets/logo.png" width="36" height="36" alt="TradeInWork 标志" />
+        <span>TradeInWork</span>
+      </a>
+      <nav aria-label="主导航">
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-main" aria-label="打开菜单">
+          ☰
+        </button>
+        <ul id="nav-main" class="nav-main">
+          <li><a href="#features">功能</a></li>
+          <li><a href="#highlights">特色</a></li>
+          <li><a href="#workflow">业务闭环</a></li>
+          <li><a href="#download">下载</a></li>
+          <li><a href="#contact">联系我们</a></li>
+          <li>
+            <a class="nav-cta"
+              href="https://github.com/HangzhouTriumphAutotech/hangzhoutriumphautotech.github.io/releases/download/v0.1.2/TradeWork.Setup.0.1.3.exe"
+              rel="noopener">免费下载</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <span class="hero-badge">本地桌面 · 数据自主 · 外贸专属</span>
+          <h1 id="hero-title">外贸客户管理系统<br />让每一笔订单都可追溯</h1>
+          <p class="hero-lead">
+            <strong>TradeInWork</strong> 是宁波西泠人工智能科技有限公司为外贸团队打造的纯本地
+            CRM 桌面应用。客户跟进、销售/采购/物流订单、合同 PI/PO、利润报表与 AI
+            助手集中在一处，数据保存在您本机的 SQLite，不上云、更安心。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary"
+              href="https://github.com/HangzhouTriumphAutotech/hangzhoutriumphautotech.github.io/releases/download/v0.1.2/TradeWork.Setup.0.1.3.exe"
+              rel="noopener">免费下载 Windows 版</a>
+            <a class="btn btn-secondary" href="#contact">预约演示 / 咨询</a>
+            <a class="btn btn-secondary" href="#features">了解功能模块</a>
           </div>
-          <div class="hero-visual reveal" aria-hidden="true">
-            <div class="mock-window">
-              <div class="mock-titlebar">
-                <span class="mock-dot"></span>
-                <span class="mock-dot"></span>
-                <span class="mock-dot"></span>
-              </div>
-              <div class="mock-body">
-                <aside class="mock-sidebar">
-                  <div class="mock-nav-item active">仪表盘</div>
-                  <div class="mock-nav-item">销售订单</div>
-                  <div class="mock-nav-item">客户管理</div>
-                  <div class="mock-nav-item">产品管理</div>
-                  <div class="mock-nav-item">报表统计</div>
-                </aside>
-                <div class="mock-content">
-                  <div class="mock-kpis">
-                    <div class="mock-kpi"><span>本月订单</span><strong>128</strong></div>
-                    <div class="mock-kpi"><span>销售额 USD</span><strong>2.4M</strong></div>
-                    <div class="mock-kpi"><span>新增客户</span><strong>36</strong></div>
-                  </div>
-                  <div class="mock-chart">
-                    <div class="mock-bar" style="height: 45%"></div>
-                    <div class="mock-bar" style="height: 62%"></div>
-                    <div class="mock-bar" style="height: 55%"></div>
-                    <div class="mock-bar" style="height: 78%"></div>
-                    <div class="mock-bar" style="height: 70%"></div>
-                    <div class="mock-bar" style="height: 88%"></div>
-                  </div>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="mock-window">
+            <div class="mock-titlebar">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+            </div>
+            <div class="mock-body">
+              <aside class="mock-sidebar">
+                <div class="mock-nav-item active">仪表盘</div>
+                <div class="mock-nav-item">销售订单</div>
+                <div class="mock-nav-item">客户管理</div>
+                <div class="mock-nav-item">产品管理</div>
+                <div class="mock-nav-item">报表统计</div>
+              </aside>
+              <div class="mock-content">
+                <div class="mock-kpis">
+                  <div class="mock-kpi"><span>本月订单</span><strong>128</strong></div>
+                  <div class="mock-kpi"><span>销售额 USD</span><strong>2.4M</strong></div>
+                  <div class="mock-kpi"><span>新增客户</span><strong>36</strong></div>
+                </div>
+                <div class="mock-chart">
+                  <div class="mock-bar" style="height: 45%"></div>
+                  <div class="mock-bar" style="height: 62%"></div>
+                  <div class="mock-bar" style="height: 55%"></div>
+                  <div class="mock-bar" style="height: 78%"></div>
+                  <div class="mock-bar" style="height: 70%"></div>
+                  <div class="mock-bar" style="height: 88%"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="features" class="section" aria-labelledby="features-title">
-        <div class="section-inner">
-          <header class="section-header reveal">
-            <h2 id="features-title">覆盖外贸业务全链路</h2>
-            <p>从获客跟进到出运结算，模块化设计贴合出口企业日常操作习惯。</p>
-          </header>
-          <ul class="features-grid">
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">📊</div>
-              <h3>智能仪表盘</h3>
-              <p>月度订单量/金额、趋势图、状态分布、国家地区与员工销售排行，临近发货与待跟进客户一目了然。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">👥</div>
-              <h3>客户管理</h3>
-              <p>客户分级 L1–L4、分类与状态、多联系人、跟进记录、收藏与分配，支持暂停跟进提醒。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">🛒</div>
-              <h3>订单全流程</h3>
-              <p>销售订单状态自待生产至已完成；采购订单对接工厂；物流订单管理运输费用与轨迹。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">📄</div>
-              <h3>合同与单证</h3>
-              <p>销售合同/形式发票 PI、采购合同/采购订单 PO，支持预览导出 PDF，中英双语公司信息。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">💰</div>
-              <h3>客户报价单</h3>
-              <p>快速生成报价、预览 HTML、导出 PDF，与客户和产品数据联动，减少重复录入。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">📦</div>
-              <h3>产品与供应商</h3>
-              <p>多级产品分类、多币种售价/成本、价格历史；工厂与物流公司档案及合作状态管理。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">📈</div>
-              <h3>多维报表</h3>
-              <p>订单利润、销售/采购统计，按客户、国家、产品、员工维度分析，自定义日期区间。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">🤖</div>
-              <h3>AI 智能助手</h3>
-              <p>全局对话侧栏、斜杠 Skill、流式 Markdown；订单/客户/报表分析、外贸邮件撰写，权限与数据范围一致。</p>
-            </li>
-            <li class="feature-card reveal">
-              <div class="feature-icon" aria-hidden="true">🧩</div>
-              <h3>应用市场</h3>
-              <p>内置汇率、世界时钟、翻译、邮箱等效率工具；支持社区 HTTPS 应用审核上架，侧栏即用。</p>
-            </li>
-          </ul>
+    <section id="features" class="section" aria-labelledby="features-title">
+      <div class="section-inner">
+        <header class="section-header reveal">
+          <h2 id="features-title">覆盖外贸业务全链路</h2>
+          <p>从获客跟进到出运结算，模块化设计贴合出口企业日常操作习惯。</p>
+        </header>
+        <ul class="features-grid">
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3>智能仪表盘</h3>
+            <p>月度订单量/金额、趋势图、状态分布、国家地区与员工销售排行，临近发货与待跟进客户一目了然。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">👥</div>
+            <h3>客户管理</h3>
+            <p>客户分级 L1–L4、分类与状态、多联系人、跟进记录、收藏与分配，支持暂停跟进提醒。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">🛒</div>
+            <h3>订单全流程</h3>
+            <p>销售订单状态自待生产至已完成；采购订单对接工厂；物流订单管理运输费用与轨迹。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">📄</div>
+            <h3>合同与单证</h3>
+            <p>销售合同/形式发票 PI、采购合同/采购订单 PO，支持预览导出 PDF，中英双语公司信息。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">💰</div>
+            <h3>客户报价单</h3>
+            <p>快速生成报价、预览 HTML、导出 PDF，与客户和产品数据联动，减少重复录入。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">📦</div>
+            <h3>产品与供应商</h3>
+            <p>多级产品分类、多币种售价/成本、价格历史；工厂与物流公司档案及合作状态管理。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <h3>多维报表</h3>
+            <p>订单利润、销售/采购统计，按客户、国家、产品、员工维度分析，自定义日期区间。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">🤖</div>
+            <h3>AI 智能助手</h3>
+            <p>全局对话侧栏、斜杠 Skill、流式 Markdown；订单/客户/报表分析、外贸邮件撰写，权限与数据范围一致。</p>
+          </li>
+          <li class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">🧩</div>
+            <h3>应用市场</h3>
+            <p>内置汇率、世界时钟、翻译、邮箱等效率工具；支持社区 HTTPS 应用审核上架，侧栏即用。</p>
+          </li>
+        </ul>
 
-          <div class="stats-strip reveal">
-            <div class="stat-item">
-              <strong>本地</strong>
-              <span>SQLite 数据存本机</span>
-            </div>
-            <div class="stat-item">
-              <strong>RBAC</strong>
-              <span>角色权限精细控制</span>
-            </div>
-            <div class="stat-item">
-              <strong>37+</strong>
-              <span>持续演进的数据迁移</span>
-            </div>
-            <div class="stat-item">
-              <strong>明暗</strong>
-              <span>主题随系统偏好切换</span>
-            </div>
+        <div class="stats-strip reveal">
+          <div class="stat-item">
+            <strong>本地</strong>
+            <span>SQLite 数据存本机</span>
+          </div>
+          <div class="stat-item">
+            <strong>RBAC</strong>
+            <span>角色权限精细控制</span>
+          </div>
+          <div class="stat-item">
+            <strong>37+</strong>
+            <span>持续演进的数据迁移</span>
+          </div>
+          <div class="stat-item">
+            <strong>明暗</strong>
+            <span>主题随系统偏好切换</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="highlights" class="section section-alt" aria-labelledby="highlights-title">
-        <div class="section-inner highlights">
-          <header class="section-header reveal">
-            <h2 id="highlights-title">为什么选择 TradeInWork</h2>
-            <p>不是通用 SaaS，而是为外贸场景深度定制的桌面效率工具。</p>
-          </header>
+    <section id="highlights" class="section section-alt" aria-labelledby="highlights-title">
+      <div class="section-inner highlights">
+        <header class="section-header reveal">
+          <h2 id="highlights-title">为什么选择 TradeInWork</h2>
+          <p>不是通用 SaaS，而是为外贸场景深度定制的桌面效率工具。</p>
+        </header>
 
-          <article class="highlight-row reveal">
-            <div class="highlight-copy">
-              <span class="highlight-tag">数据安全</span>
-              <h3>纯本地部署，业务数据不出电脑</h3>
-              <p>
-                基于 Electron + SQLite 架构，数据库与附件保存在用户目录，支持 ZIP
-                备份与恢复。适合对商业机密、客户名单有严格合规要求的企业。
-              </p>
-              <ul class="highlight-list">
-                <li>一键数据导入导出与自动备份</li>
-                <li>完整操作日志审计</li>
-                <li>员工数据按权限隔离（含仅看本人数据）</li>
-              </ul>
-            </div>
-            <div class="highlight-panel" aria-hidden="true">
-              <ul class="panel-list">
-                <li><span>数据库</span><span class="status status-ok">本机 SQLite</span></li>
-                <li><span>附件存储</span><span class="status status-ok">本地 uploads</span></li>
-                <li><span>云端依赖</span><span class="status">无强制上云</span></li>
-                <li><span>AI 对话</span><span class="status">可选 API，会话本地落库</span></li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="highlight-row reverse reveal">
-            <div class="highlight-copy">
-              <span class="highlight-tag">AI 赋能</span>
-              <h3>内置 AI 助手，懂您的 CRM 数据</h3>
-              <p>
-                通过 DAP（Data Access Protocol）让 AI 在授权范围内查询业务数据；管理员配置模型与
-                API Key，员工使用斜杠命令调用 Skill，提升写邮件、看报表的效率。
-              </p>
-              <ul class="highlight-list">
-                <li>订单统计解读、客户分析、报表摘要</li>
-                <li>外贸邮件草稿（询价/报价/催款等场景）</li>
-                <li>流式 Markdown 回复，会话按员工隔离</li>
-              </ul>
-            </div>
-            <div class="highlight-panel" aria-hidden="true">
-              <ul class="panel-list">
-                <li><span>/analyze-orders</span><span class="status status-ok">订单分析</span></li>
-                <li><span>/analyze-customers</span><span class="status status-ok">客户洞察</span></li>
-                <li><span>/draft-email</span><span class="status status-ok">邮件撰写</span></li>
-                <li><span>DeepSeek</span><span class="status">OpenAI 兼容接口</span></li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="highlight-row reveal">
-            <div class="highlight-copy">
-              <span class="highlight-tag">团队协作</span>
-              <h3>权限体系与应用市场，兼顾管控与灵活</h3>
-              <p>
-                超级管理员、管理员、销售经理、员工四级角色；数据字典、编号前缀、公司品牌均可配置。应用市场让汇率、翻译等工具触手可及。
-              </p>
-              <ul class="highlight-list">
-                <li>销售/采购/物流/报表/系统模块独立授权</li>
-                <li>客户批量分配、订单状态变更留痕</li>
-                <li>内置 + 社区应用，管理员审核上架</li>
-              </ul>
-            </div>
-            <div class="highlight-panel" aria-hidden="true">
-              <ul class="panel-list">
-                <li><span>super_admin</span><span class="status status-ok">全部权限</span></li>
-                <li><span>sales_manager</span><span class="status">销售域</span></li>
-                <li><span>employee</span><span class="status">*:own 数据</span></li>
-                <li><span>应用市场</span><span class="status status-warn">侧栏 400–600px</span></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="workflow" class="section" aria-labelledby="workflow-title">
-        <div class="section-inner">
-          <header class="section-header reveal">
-            <h2 id="workflow-title">典型外贸业务闭环</h2>
-            <p>在 TradeInWork 中，常见流程可在一个系统内完成，减少 Excel 与邮件来回切换。</p>
-          </header>
-          <ol class="features-grid" style="list-style: none; counter-reset: step">
-            <li class="feature-card reveal">
-              <h3>① 获客与跟进</h3>
-              <p>录入客户与联系人，记录电话/邮件/拜访跟进，标记等级与下次跟进时间。</p>
-            </li>
-            <li class="feature-card reveal">
-              <h3>② 报价与合同</h3>
-              <p>出具客户报价单，确认后生成销售合同与 PI；采购侧同步 PO 与采购合同。</p>
-            </li>
-            <li class="feature-card reveal">
-              <h3>③ 订单执行</h3>
-              <p>销售订单驱动生产发货状态；关联采购订单与物流订单及费用。</p>
-            </li>
-            <li class="feature-card reveal">
-              <h3>④ 对账与分析</h3>
-              <p>报表查看销售额、成本、利润率；AI 助手辅助解读趋势与撰写跟进邮件。</p>
-            </li>
-            <li class="feature-card reveal">
-              <h3>⑤ 系统运维</h3>
-              <p>员工与字典维护、操作日志、定期 ZIP 备份，保障业务连续性。</p>
-            </li>
-            <li class="feature-card reveal">
-              <h3>⑥ 效率扩展</h3>
-              <p>应用市场打开汇率/翻译等工具；全局搜索快速定位客户与订单。</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="contact" class="section cta-section" aria-labelledby="contact-title">
-        <div class="section-inner reveal">
-          <div class="cta-box">
-            <h2 id="contact-title">开启更高效的外贸客户管理</h2>
+        <article class="highlight-row reveal">
+          <div class="highlight-copy">
+            <span class="highlight-tag">数据安全</span>
+            <h3>纯本地部署，业务数据不出电脑</h3>
             <p>
-              由 <strong>宁波西泠人工智能科技有限公司</strong> 研发与支持。欢迎联系我们获取产品演示、部署咨询与定制合作。
+              基于 Electron + SQLite 架构，数据库与附件保存在用户目录，支持 ZIP
+              备份与恢复。适合对商业机密、客户名单有严格合规要求的企业。
             </p>
-            <a class="btn btn-primary" href="tel:+8613123371024">致电咨询</a>
-            <div class="contact-links">
-              <div class="contact-item">
-                <span>官方网站</span>
-                <a href="https://tradeinwork.com/" rel="noopener">tradeinwork.com</a>
-              </div>
-              <div class="contact-item">
-                <span>联系电话</span>
-                <a href="tel:+8613123371024">+86 131 2337 1024</a>
-              </div>
-              <div class="contact-item">
-                <span>产品名称</span>
-                <strong>TradeInWork 外贸客户管理系统</strong>
-              </div>
+            <ul class="highlight-list">
+              <li>一键数据导入导出与自动备份</li>
+              <li>完整操作日志审计</li>
+              <li>员工数据按权限隔离（含仅看本人数据）</li>
+            </ul>
+          </div>
+          <div class="highlight-panel" aria-hidden="true">
+            <ul class="panel-list">
+              <li><span>数据库</span><span class="status status-ok">本机 SQLite</span></li>
+              <li><span>附件存储</span><span class="status status-ok">本地 uploads</span></li>
+              <li><span>云端依赖</span><span class="status">无强制上云</span></li>
+              <li><span>AI 对话</span><span class="status">可选 API，会话本地落库</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="highlight-row reverse reveal">
+          <div class="highlight-copy">
+            <span class="highlight-tag">AI 赋能</span>
+            <h3>内置 AI 助手，懂您的 CRM 数据</h3>
+            <p>
+              通过 DAP（Data Access Protocol）让 AI 在授权范围内查询业务数据；管理员配置模型与
+              API Key，员工使用斜杠命令调用 Skill，提升写邮件、看报表的效率。
+            </p>
+            <ul class="highlight-list">
+              <li>订单统计解读、客户分析、报表摘要</li>
+              <li>外贸邮件草稿（询价/报价/催款等场景）</li>
+              <li>流式 Markdown 回复，会话按员工隔离</li>
+            </ul>
+          </div>
+          <div class="highlight-panel" aria-hidden="true">
+            <ul class="panel-list">
+              <li><span>/analyze-orders</span><span class="status status-ok">订单分析</span></li>
+              <li><span>/analyze-customers</span><span class="status status-ok">客户洞察</span></li>
+              <li><span>/draft-email</span><span class="status status-ok">邮件撰写</span></li>
+              <li><span>DeepSeek</span><span class="status">OpenAI 兼容接口</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="highlight-row reveal">
+          <div class="highlight-copy">
+            <span class="highlight-tag">团队协作</span>
+            <h3>权限体系与应用市场，兼顾管控与灵活</h3>
+            <p>
+              超级管理员、管理员、销售经理、员工四级角色；数据字典、编号前缀、公司品牌均可配置。应用市场让汇率、翻译等工具触手可及。
+            </p>
+            <ul class="highlight-list">
+              <li>销售/采购/物流/报表/系统模块独立授权</li>
+              <li>客户批量分配、订单状态变更留痕</li>
+              <li>内置 + 社区应用，管理员审核上架</li>
+            </ul>
+          </div>
+          <div class="highlight-panel" aria-hidden="true">
+            <ul class="panel-list">
+              <li><span>super_admin</span><span class="status status-ok">全部权限</span></li>
+              <li><span>sales_manager</span><span class="status">销售域</span></li>
+              <li><span>employee</span><span class="status">*:own 数据</span></li>
+              <li><span>应用市场</span><span class="status status-warn">侧栏 400–600px</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section" aria-labelledby="workflow-title">
+      <div class="section-inner">
+        <header class="section-header reveal">
+          <h2 id="workflow-title">典型外贸业务闭环</h2>
+          <p>在 TradeInWork 中，常见流程可在一个系统内完成，减少 Excel 与邮件来回切换。</p>
+        </header>
+        <ol class="features-grid" style="list-style: none; counter-reset: step">
+          <li class="feature-card reveal">
+            <h3>① 获客与跟进</h3>
+            <p>录入客户与联系人，记录电话/邮件/拜访跟进，标记等级与下次跟进时间。</p>
+          </li>
+          <li class="feature-card reveal">
+            <h3>② 报价与合同</h3>
+            <p>出具客户报价单，确认后生成销售合同与 PI；采购侧同步 PO 与采购合同。</p>
+          </li>
+          <li class="feature-card reveal">
+            <h3>③ 订单执行</h3>
+            <p>销售订单驱动生产发货状态；关联采购订单与物流订单及费用。</p>
+          </li>
+          <li class="feature-card reveal">
+            <h3>④ 对账与分析</h3>
+            <p>报表查看销售额、成本、利润率；AI 助手辅助解读趋势与撰写跟进邮件。</p>
+          </li>
+          <li class="feature-card reveal">
+            <h3>⑤ 系统运维</h3>
+            <p>员工与字典维护、操作日志、定期 ZIP 备份，保障业务连续性。</p>
+          </li>
+          <li class="feature-card reveal">
+            <h3>⑥ 效率扩展</h3>
+            <p>应用市场打开汇率/翻译等工具；全局搜索快速定位客户与订单。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="download" class="section section-alt" aria-labelledby="download-title">
+      <div class="section-inner">
+        <header class="section-header reveal">
+          <h2 id="download-title">下载 TradeInWork</h2>
+          <p>获取最新 Windows 安装包，在本机完成安装后即可使用外贸客户管理系统。</p>
+        </header>
+        <div class="download-card reveal">
+          <div class="download-card-main">
+            <div class="download-icon" aria-hidden="true">⬇</div>
+            <div>
+              <h3>TradeInWork 安装程序</h3>
+              <p class="download-version">当前版本 <strong>0.1.3</strong> · Windows 10 / 11（64 位）</p>
+              <p class="download-filename">TradeWork.Setup.0.1.3.exe</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-download"
+            href="https://github.com/HangzhouTriumphAutotech/hangzhoutriumphautotech.github.io/releases/download/v0.1.2/TradeWork.Setup.0.1.3.exe"
+            rel="noopener">立即下载</a>
+          <ul class="download-notes">
+            <li>安装包由 GitHub Releases 托管，下载过程受浏览器与网络环境影响。</li>
+            <li>首次运行若遇 Windows 安全提示，请选择「仍要运行」或向管理员申请放行。</li>
+            <li>macOS 版本即将推出；企业批量部署与定制请联系销售团队。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section cta-section" aria-labelledby="contact-title">
+      <div class="section-inner reveal">
+        <div class="cta-box">
+          <h2 id="contact-title">开启更高效的外贸客户管理</h2>
+          <p>
+            由 <strong>宁波西泠人工智能科技有限公司</strong> 研发与支持。欢迎联系我们获取产品演示、部署咨询与定制合作。
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary"
+              href="https://github.com/HangzhouTriumphAutotech/hangzhoutriumphautotech.github.io/releases/download/v0.1.2/TradeWork.Setup.0.1.3.exe"
+              rel="noopener">下载 Windows 版</a>
+            <a class="btn btn-secondary" href="tel:+8613123371024">致电咨询</a>
+          </div>
+          <div class="contact-links">
+            <div class="contact-item">
+              <span>官方网站</span>
+              <a href="https://tradeinwork.com/" rel="noopener">tradeinwork.com</a>
+            </div>
+            <div class="contact-item">
+              <span>联系电话</span>
+              <a href="tel:+8613123371024">+86 131 2337 1024</a>
+            </div>
+            <div class="contact-item">
+              <span>产品名称</span>
+              <strong>TradeInWork 外贸客户管理系统</strong>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a class="brand" href="https://tradeinwork.com/">
-            <img src="assets/logo.png" width="32" height="32" alt="" />
-            <span>TradeInWork</span>
-          </a>
-          <p>
-            宁波西泠人工智能科技有限公司专注于外贸数字化工具。TradeInWork
-            外贸客户管理系统助力出口企业客户、订单与利润一体化管理。
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>产品</h4>
-          <ul>
-            <li><a href="#features">功能模块</a></li>
-            <li><a href="#highlights">产品特色</a></li>
-            <li><a href="#workflow">业务闭环</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>联系</h4>
-          <ul>
-            <li><a href="https://tradeinwork.com/">tradeinwork.com</a></li>
-            <li><a href="tel:+8613123371024">+86 13123371024</a></li>
-          </ul>
-        </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="year">2026</span> 宁波西泠人工智能科技有限公司</span>
-        <span>TradeInWork · 外贸客户管理系统</span>
-      </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="js/main.js" defer></script>
-  </body>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="https://tradeinwork.com/">
+          <img src="assets/logo.png" width="32" height="32" alt="" />
+          <span>TradeInWork</span>
+        </a>
+        <p>
+          宁波西泠人工智能科技有限公司专注于外贸数字化工具。TradeInWork
+          外贸客户管理系统助力出口企业客户、订单与利润一体化管理。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="#features">功能模块</a></li>
+          <li><a href="#highlights">产品特色</a></li>
+          <li><a href="#workflow">业务闭环</a></li>
+          <li>
+            <a href="https://github.com/HangzhouTriumphAutotech/hangzhoutriumphautotech.github.io/releases/download/v0.1.2/TradeWork.Setup.0.1.3.exe"
+              rel="noopener">下载安装包</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <ul>
+          <li><a href="https://tradeinwork.com/">tradeinwork.com</a></li>
+          <li><a href="tel:+8613123371024">+86 13123371024</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 宁波西泠人工智能科技有限公司</span>
+      <span>TradeInWork · 外贸客户管理系统</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
 </html>

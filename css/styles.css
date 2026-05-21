@@ -597,6 +597,79 @@ a:hover {
   color: var(--trade-text-secondary);
 }
 
+/* Download */
+.download-card {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px;
+  background: var(--trade-surface);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.download-card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.download-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: var(--trade-fill-muted);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius-sm);
+}
+
+.download-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.download-version {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: var(--trade-text-muted);
+}
+
+.download-filename {
+  margin: 0;
+  font-size: 13px;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  color: var(--trade-text-secondary);
+}
+
+.btn-download {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.download-notes {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--trade-text-secondary);
+}
+
+.download-notes li + li {
+  margin-top: 8px;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
 /* CTA */
 .cta-section {
   background: var(--trade-surface);
