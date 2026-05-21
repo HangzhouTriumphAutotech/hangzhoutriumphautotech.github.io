@@ -10,6 +10,23 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  var previewFrame = document.querySelector('[data-hero-preview]');
+  var previewImg = document.querySelector('.hero-preview-img');
+  if (previewFrame && previewImg) {
+    function markPreviewLoaded() {
+      previewFrame.classList.add('is-loaded');
+    }
+
+    if (previewImg.complete && previewImg.naturalWidth > 0) {
+      markPreviewLoaded();
+    } else {
+      previewImg.addEventListener('load', markPreviewLoaded);
+      previewImg.addEventListener('error', function () {
+        previewFrame.classList.add('is-error');
+      });
+    }
+  }
+
   function onScroll() {
     if (!header) return;
     header.classList.toggle('is-scrolled', window.scrollY > 8);

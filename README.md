@@ -1,10 +1,18 @@
 # TradeInWork 官方网站
 
-纯静态站点（HTML + CSS + JS），用于展示 **TradeInWork 外贸客户管理系统** 产品能力。
+纯静态站点（HTML + CSS + JS），用于展示 **TradeInWork** 外贸数字化品牌及旗下产品。
+
+## 品牌与产品
+
+| 名称 | 定位 |
+|------|------|
+| **TradeInWork** | 品牌 / 官网（tradeinwork.com） |
+| **TradeWork** | 首款产品：AI 外贸 SOHO 本地客户管理系统（可下载 Windows 安装包） |
+| *更多产品* | 筹备中，站点已预留产品矩阵展示位 |
 
 ## 部署
 
-将 `website/` 目录下全部文件发布到 `https://tradeinwork.com/` 根路径即可。
+将仓库根目录下全部文件发布到 `https://tradeinwork.com/` 根路径即可。
 
 建议服务器配置：
 
@@ -16,19 +24,17 @@
 ## 本地预览
 
 ```bash
-# 在 website 目录启动简易 HTTP 服务（任选其一）
-npx --yes serve website
+npx --yes serve .
 # 或
-python -m http.server 8080 --directory website
+python -m http.server 8080
 ```
 
 ## 文件结构
 
 ```
-website/
-├── index.html      # 落地页（含 SEO meta 与 JSON-LD）
-├── css/styles.css  # 与桌面端灰色主题对齐
-├── js/main.js      # 导航、滚动、入场动画
+├── index.html      # 品牌首页 + TradeWork 产品详情
+├── css/styles.css
+├── js/main.js
 ├── assets/logo.png
 ├── robots.txt
 ├── sitemap.xml
@@ -38,5 +44,5 @@ website/
 ## 联系信息（站点内已配置）
 
 - 公司：宁波西泠人工智能科技有限公司
-- 网站：https://tradeinwork.com/
+- 品牌：https://tradeinwork.com/
 - 电话：+86 13123371024
