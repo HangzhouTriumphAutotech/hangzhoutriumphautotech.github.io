@@ -409,6 +409,49 @@ a:hover {
   color: var(--trade-primary);
 }
 
+.btn-ghost {
+  background: transparent;
+  color: var(--trade-text-muted);
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  color: var(--trade-primary);
+  background: var(--trade-fill-secondary);
+}
+
+/* Hero meta strip (under hero CTAs) */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  color: var(--trade-text-secondary);
+}
+
+.hero-meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-meta-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--trade-primary);
+  opacity: 0.7;
+}
+
+.product-status--beta {
+  background: #fff7e6;
+  color: #d48806;
+}
+
 .hero-visual {
   margin: 0;
   min-width: 0;
@@ -1080,6 +1123,455 @@ a:hover {
   }
 
   .mock-sidebar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Compare table (TradeWork vs TradeCoWork)
+   ========================================================================== */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  background: var(--trade-surface);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-col {
+  display: flex;
+  flex-direction: column;
+  background: var(--trade-surface);
+}
+
+.compare-col--header {
+  background: var(--trade-fill-muted);
+}
+
+.compare-col--accent {
+  background: rgba(22, 119, 255, 0.04);
+  position: relative;
+}
+
+.compare-col--accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--trade-primary);
+}
+
+.compare-cell {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--trade-text);
+  border-bottom: 1px solid var(--trade-border);
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+}
+
+.compare-col > .compare-cell:last-child {
+  border-bottom: none;
+}
+
+.compare-col--header .compare-cell {
+  color: var(--trade-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.compare-cell--head {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  min-height: 84px;
+  background: var(--trade-fill-muted);
+}
+
+.compare-col--accent .compare-cell--head {
+  background: rgba(22, 119, 255, 0.06);
+}
+
+.compare-cell--head strong {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--trade-text);
+}
+
+.compare-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: var(--trade-fill-secondary);
+  color: var(--trade-text-secondary);
+  font-size: 12px;
+}
+
+.compare-badge--accent {
+  background: rgba(22, 119, 255, 0.12);
+  color: var(--trade-primary);
+}
+
+.compare-cell .check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: rgba(56, 158, 13, 0.12);
+  color: #389e0d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.compare-helper {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--trade-text-muted);
+}
+
+.compare-helper p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Download — dual product cards
+   ========================================================================== */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.download-card--product {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: var(--trade-surface);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  max-width: none;
+  margin: 0;
+}
+
+.download-card--accent {
+  border-color: rgba(22, 119, 255, 0.35);
+  background: linear-gradient(180deg, rgba(22, 119, 255, 0.03) 0%, var(--trade-surface) 60%);
+}
+
+.download-card-header {
+  margin-bottom: 18px;
+}
+
+.download-card-header h3 {
+  margin: 8px 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.download-card--product .download-version {
+  margin: 0;
+  font-size: 14px;
+  color: var(--trade-text-muted);
+}
+
+.download-platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.download-platform {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--trade-fill-muted);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius-sm);
+  color: var(--trade-text);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.download-platform:hover {
+  border-color: var(--trade-primary);
+  background: var(--trade-surface);
+  color: var(--trade-text);
+  transform: translateY(-1px);
+}
+
+.download-platform.is-recommended {
+  background: var(--trade-surface);
+  border-color: var(--trade-primary);
+  box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.08);
+}
+
+.download-platform-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--trade-surface);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius-sm);
+  color: var(--trade-text-muted);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.download-platform-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.download-platform:hover .download-platform-icon {
+  background: rgba(22, 119, 255, 0.08);
+  border-color: rgba(22, 119, 255, 0.25);
+  color: var(--trade-primary);
+}
+
+.download-platform.is-recommended .download-platform-icon {
+  background: rgba(22, 119, 255, 0.08);
+  border-color: rgba(22, 119, 255, 0.25);
+  color: var(--trade-primary);
+}
+
+.download-platform-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.download-platform-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--trade-text);
+}
+
+.download-platform.is-recommended .download-platform-name::after {
+  content: '· 推荐';
+  margin-left: 6px;
+  color: var(--trade-primary);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.download-platform-file {
+  font-size: 12px;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  color: var(--trade-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.download-platform-cta {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--trade-fill-secondary);
+  color: var(--trade-text-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.download-platform.is-recommended .download-platform-cta,
+.download-platform:hover .download-platform-cta {
+  background: var(--trade-primary);
+  color: #fff;
+}
+
+.download-card--product .download-notes {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--trade-text-secondary);
+}
+
+/* ==========================================================================
+   Roadmap timeline
+   ========================================================================== */
+.roadmap-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  counter-reset: roadmap;
+  position: relative;
+}
+
+.roadmap-grid::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--trade-primary) 0%,
+    var(--trade-primary) 50%,
+    var(--trade-border) 50%,
+    var(--trade-border) 100%);
+  z-index: 0;
+}
+
+.roadmap-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 14px;
+  z-index: 1;
+}
+
+.roadmap-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--trade-surface);
+  border: 2px solid var(--trade-border);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--trade-text-secondary);
+}
+
+.roadmap-step--done .roadmap-marker {
+  background: var(--trade-primary);
+  border-color: var(--trade-primary);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(22, 119, 255, 0.12);
+}
+
+.roadmap-step--next .roadmap-marker {
+  background: var(--trade-surface);
+  border-color: var(--trade-primary);
+  color: var(--trade-primary);
+}
+
+.roadmap-body {
+  text-align: center;
+  background: var(--trade-surface);
+  border: 1px solid var(--trade-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.roadmap-status {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: rgba(22, 119, 255, 0.1);
+  color: var(--trade-primary);
+  margin-bottom: 10px;
+}
+
+.roadmap-status--next {
+  background: #fff7e6;
+  color: #d48806;
+}
+
+.roadmap-status--future {
+  background: var(--trade-fill-secondary);
+  color: var(--trade-text-secondary);
+}
+
+.roadmap-body h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.roadmap-body p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--trade-text-secondary);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Responsive overrides for new sections
+   ========================================================================== */
+@media (max-width: 960px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .compare-col {
+    background: var(--trade-surface);
+    border: 1px solid var(--trade-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .compare-col--header {
+    display: none;
+  }
+
+  .compare-cell {
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .compare-cell[data-label]::before {
+    content: attr(data-label);
+    flex-shrink: 0;
+    color: var(--trade-text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 16px;
+  }
+
+  .compare-cell[data-label] {
+    flex-direction: row;
+    text-align: right;
+  }
+
+  .download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .roadmap-grid::before {
     display: none;
   }
 }

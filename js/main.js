@@ -1,58 +1,58 @@
 (function () {
   "use strict";
 
-  // Centralized download links configuration
+  // Centralized download links: product -> platform
   var DOWNLOAD_LINKS = {
-    windows:
-      "https://github.com/simo-an/app-storage/releases/download/v0.2.0/TradeWork.Setup.0.2.0.exe",
-    macos:
-      "https://github.com/simo-an/app-storage/releases/download/v0.2.0/TradeWork-0.2.0-arm64.dmg",
+    tradework: {
+      windows:
+        "https://github.com/simo-an/app-storage/releases/download/v0.2.0/TradeWork.Setup.0.2.0.exe",
+      macos:
+        "https://github.com/simo-an/app-storage/releases/download/v0.2.0/TradeWork-0.2.0-arm64.dmg",
+    },
+    tradecowork: {
+      windows:
+        "https://github.com/simo-an/app-storage/releases/download/v1.0.0-beta.3/TradeCoWork.Setup.1.0.0-beta.3.exe",
+      macos:
+        "https://github.com/simo-an/app-storage/releases/download/v1.0.0-beta.3/TradeWork-1.0.0-beta.3-arm64.dmg",
+    },
   };
 
-  // Detect OS and update download links and show appropriate download card
-  function detectAndShowDownload() {
-    var userAgent = navigator.userAgent.toLowerCase();
-    var isMacOS = /macintosh|mac os x|macos/.test(userAgent);
-
-    var windowsCard = document.getElementById("download-windows");
-    var macosCard = document.getElementById("download-macos");
-    var downloadDesc = document.getElementById("download-desc");
-
-    // Update download cards visibility
-    if (windowsCard && macosCard && downloadDesc) {
-      if (isMacOS) {
-        windowsCard.style.display = "none";
-        macosCard.style.display = "block";
-        downloadDesc.textContent =
-          "获取最新 macOS 安装包（Apple Silicon），在本机完成安装后即可使用。";
-      } else {
-        windowsCard.style.display = "block";
-        macosCard.style.display = "none";
-        downloadDesc.textContent =
-          "获取最新 Windows 安装包，在本机完成安装后即可使用。";
-      }
-    }
-
-    // Update all download links based on OS
-    var downloadLinks = document.querySelectorAll(".download-link");
-    downloadLinks.forEach(function (link) {
-      var opposite = link.getAttribute("data-download-opposite");
-
-      if (opposite) {
-        // "Switch platform" links use opposite platform
-        link.href = DOWNLOAD_LINKS[opposite];
-      } else {
-        // Normal links use current platform
-        link.href = isMacOS ? DOWNLOAD_LINKS.macos : DOWNLOAD_LINKS.windows;
-      }
-    });
+  function detectOS() {
+    var ua = navigator.userAgent.toLowerCase();
+    return /macintosh|mac os x|macos/.test(ua) ? "macos" : "windows";
   }
 
-  detectAndShowDownload();
+  var currentOS = detectOS();
 
-  // Expose DOWNLOAD_LINKS globally for easy maintenance
-  window.TRADE_WORK_DOWNLOAD_LINKS = DOWNLOAD_LINKS;
+  // 1) Product cards (#card-*): each .download-link auto-points to current OS
+  document.querySelectorAll(".download-link[data-product]").forEach(function (link) {
+    var product = link.getAttribute("data-product");
+    var product_links = DOWNLOAD_LINKS[product];
+    if (product_links && product_links[currentOS]) {
+      link.href = product_links[currentOS];
+    }
+  });
 
+  // 2) Download section: render both platforms per product, mark current OS as recommended
+  document.querySelectorAll(".download-platforms[data-product]").forEach(function (group) {
+    var product = group.getAttribute("data-product");
+    var product_links = DOWNLOAD_LINKS[product];
+    if (!product_links) return;
+
+    group.querySelectorAll(".download-platform[data-platform]").forEach(function (item) {
+      var platform = item.getAttribute("data-platform");
+      if (product_links[platform]) {
+        item.href = product_links[platform];
+      }
+      // Reflect detected OS as recommended (markup defaults to windows)
+      item.classList.toggle("is-recommended", platform === currentOS);
+    });
+  });
+
+  // Expose globally for easy maintenance
+  window.TRADE_INWORK_DOWNLOAD_LINKS = DOWNLOAD_LINKS;
+
+  // ---------- Header / nav ----------
   var header = document.querySelector(".site-header");
   var menuToggle = document.querySelector(".menu-toggle");
   var navMain = document.querySelector(".nav-main");
@@ -62,6 +62,7 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  // ---------- Hero preview image ----------
   var previewFrame = document.querySelector("[data-hero-preview]");
   var previewImg = document.querySelector(".hero-preview-img");
   if (previewFrame && previewImg) {
@@ -101,6 +102,7 @@
     });
   }
 
+  // ---------- Reveal on scroll ----------
   if ("IntersectionObserver" in window) {
     var revealEls = document.querySelectorAll(".reveal");
     var observer = new IntersectionObserver(
