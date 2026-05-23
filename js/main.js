@@ -12,7 +12,7 @@
   // Detect OS and update download links and show appropriate download card
   function detectAndShowDownload() {
     var userAgent = navigator.userAgent.toLowerCase();
-    var isMacOS = !/macintosh|mac os x|macos/.test(userAgent);
+    var isMacOS = /macintosh|mac os x|macos/.test(userAgent);
 
     var windowsCard = document.getElementById("download-windows");
     var macosCard = document.getElementById("download-macos");
