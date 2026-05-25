@@ -13,7 +13,7 @@
       windows:
         "https://github.com/simo-an/app-storage/releases/download/v1.0.0-beta.3/TradeCoWork.Setup.1.0.0-beta.3.exe",
       macos:
-        "https://github.com/simo-an/app-storage/releases/download/v1.0.0-beta.3/TradeWork-1.0.0-beta.3-arm64.dmg",
+        "https://github.com/simo-an/app-storage/releases/download/v1.0.0-beta.3/TradeCoWork-1.0.0-beta.3-arm64.dmg",
     },
   };
 
@@ -25,29 +25,35 @@
   var currentOS = detectOS();
 
   // 1) Product cards (#card-*): each .download-link auto-points to current OS
-  document.querySelectorAll(".download-link[data-product]").forEach(function (link) {
-    var product = link.getAttribute("data-product");
-    var product_links = DOWNLOAD_LINKS[product];
-    if (product_links && product_links[currentOS]) {
-      link.href = product_links[currentOS];
-    }
-  });
+  document
+    .querySelectorAll(".download-link[data-product]")
+    .forEach(function (link) {
+      var product = link.getAttribute("data-product");
+      var product_links = DOWNLOAD_LINKS[product];
+      if (product_links && product_links[currentOS]) {
+        link.href = product_links[currentOS];
+      }
+    });
 
   // 2) Download section: render both platforms per product, mark current OS as recommended
-  document.querySelectorAll(".download-platforms[data-product]").forEach(function (group) {
-    var product = group.getAttribute("data-product");
-    var product_links = DOWNLOAD_LINKS[product];
-    if (!product_links) return;
+  document
+    .querySelectorAll(".download-platforms[data-product]")
+    .forEach(function (group) {
+      var product = group.getAttribute("data-product");
+      var product_links = DOWNLOAD_LINKS[product];
+      if (!product_links) return;
 
-    group.querySelectorAll(".download-platform[data-platform]").forEach(function (item) {
-      var platform = item.getAttribute("data-platform");
-      if (product_links[platform]) {
-        item.href = product_links[platform];
-      }
-      // Reflect detected OS as recommended (markup defaults to windows)
-      item.classList.toggle("is-recommended", platform === currentOS);
+      group
+        .querySelectorAll(".download-platform[data-platform]")
+        .forEach(function (item) {
+          var platform = item.getAttribute("data-platform");
+          if (product_links[platform]) {
+            item.href = product_links[platform];
+          }
+          // Reflect detected OS as recommended (markup defaults to windows)
+          item.classList.toggle("is-recommended", platform === currentOS);
+        });
     });
-  });
 
   // Expose globally for easy maintenance
   window.TRADE_INWORK_DOWNLOAD_LINKS = DOWNLOAD_LINKS;
